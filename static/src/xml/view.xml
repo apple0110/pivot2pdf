@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<template>
+
+    <!-- extend PivotView widget -->
+
+    <t t-extend="PivotView.buttons">
+        <t t-jquery="button[title='Download xls']" t-operation="after">
+		    <button id="create_pdf" class="btn btn-default fa fa-file-pdf-o" title="" data-original-title="Export PDF"></button>
+        </t>
+    </t>
+
+    <!-- extend GraphView widget -->
+
+    <t t-extend="GraphView.buttons">
+        <t t-jquery="button[data-mode='pie']" t-operation="after">
+            <button id="create_pdf" class="btn btn-default fa fa-file-pdf-o"  title="" data-original-title="Export PDF"></button>
+        </t>
+    </t>
+
+    <!-- extend CalendarView widget -->
+
+     <t t-extend="CalendarView.buttons">
+        <t t-jquery="div.o_calendar_buttons" t-operation="append">
+            <button id="create_pdf" class="btn btn-sm btn-default" type="button">PDF</button>
+        </t>
+    </t>
+
+
+</template>
+
